@@ -1,0 +1,2 @@
+# Pillow removed from function package to avoid packaging ABI-incompatible wheel.
+# Pillow and pytesseract will be provided by the Lambda Layer at runtime (/opt/python).

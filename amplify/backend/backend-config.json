@@ -1,0 +1,43 @@
+{
+  "api": {
+    "imagechecker": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "imageChecker"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "imageChecker": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_imageChecker_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "imageChecker"
+        }
+      ]
+    },
+    "AMPLIFY_function_imageChecker_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "imageChecker"
+        }
+      ]
+    }
+  }
+}
